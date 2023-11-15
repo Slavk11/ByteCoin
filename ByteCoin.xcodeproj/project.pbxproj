@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7964C38C2B0564CD00DAE1CA /* CoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7964C38B2B0564CD00DAE1CA /* CoinManager.swift */; };
 		799016B32B00CEC100F4F847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799016B22B00CEC100F4F847 /* AppDelegate.swift */; };
 		799016B52B00CEC100F4F847 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799016B42B00CEC100F4F847 /* SceneDelegate.swift */; };
 		799016B72B00CEC100F4F847 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799016B62B00CEC100F4F847 /* ViewController.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7964C38B2B0564CD00DAE1CA /* CoinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinManager.swift; sourceTree = "<group>"; };
 		799016AF2B00CEC100F4F847 /* ByteCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ByteCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		799016B22B00CEC100F4F847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		799016B42B00CEC100F4F847 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				799016B22B00CEC100F4F847 /* AppDelegate.swift */,
 				799016B42B00CEC100F4F847 /* SceneDelegate.swift */,
 				799016B62B00CEC100F4F847 /* ViewController.swift */,
+				7964C38B2B0564CD00DAE1CA /* CoinManager.swift */,
 				799016BB2B00CEC200F4F847 /* Assets.xcassets */,
 				799016BD2B00CEC200F4F847 /* LaunchScreen.storyboard */,
 				799016C02B00CEC200F4F847 /* Info.plist */,
@@ -134,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7964C38C2B0564CD00DAE1CA /* CoinManager.swift in Sources */,
 				799016B72B00CEC100F4F847 /* ViewController.swift in Sources */,
 				799016B32B00CEC100F4F847 /* AppDelegate.swift in Sources */,
 				799016B52B00CEC100F4F847 /* SceneDelegate.swift in Sources */,

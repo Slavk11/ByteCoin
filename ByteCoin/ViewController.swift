@@ -9,6 +9,7 @@ import UIKit
 
 final class ViewController: UIViewController {
     
+    
     // MARK: - UI
     
     private lazy var mainStackView: UIStackView = {
@@ -82,11 +83,15 @@ final class ViewController: UIViewController {
         element.translatesAutoresizingMaskIntoConstraints = false
         return element
     }()
+    
+    private let coinManager = CoinManager()
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        
+        pickerView.dataSource = self
+        pickerView.delegate = self
         
         setViews()
         setConstraints()
@@ -145,3 +150,18 @@ final class ViewController: UIViewController {
     
 }
 
+extension ViewController: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return coinManager.currencyArray.count
+    }
+}
+
+extension ViewController: UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return coinManager.currencyArray[row]
+    }
+}
