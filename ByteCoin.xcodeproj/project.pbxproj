@@ -13,6 +13,7 @@
 		799016B72B00CEC100F4F847 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799016B62B00CEC100F4F847 /* ViewController.swift */; };
 		799016BC2B00CEC200F4F847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799016BB2B00CEC200F4F847 /* Assets.xcassets */; };
 		799016BF2B00CEC200F4F847 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799016BD2B00CEC200F4F847 /* LaunchScreen.storyboard */; };
+		79E2BF4C2B0E00F20001AF06 /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E2BF4B2B0E00F20001AF06 /* CoinData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		799016BB2B00CEC200F4F847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		799016BE2B00CEC200F4F847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		799016C02B00CEC200F4F847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79E2BF4B2B0E00F20001AF06 /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				799016B42B00CEC100F4F847 /* SceneDelegate.swift */,
 				799016B62B00CEC100F4F847 /* ViewController.swift */,
 				7964C38B2B0564CD00DAE1CA /* CoinManager.swift */,
+				79E2BF4B2B0E00F20001AF06 /* CoinData.swift */,
 				799016BB2B00CEC200F4F847 /* Assets.xcassets */,
 				799016BD2B00CEC200F4F847 /* LaunchScreen.storyboard */,
 				799016C02B00CEC200F4F847 /* Info.plist */,
@@ -139,6 +142,7 @@
 			files = (
 				7964C38C2B0564CD00DAE1CA /* CoinManager.swift in Sources */,
 				799016B72B00CEC100F4F847 /* ViewController.swift in Sources */,
+				79E2BF4C2B0E00F20001AF06 /* CoinData.swift in Sources */,
 				799016B32B00CEC100F4F847 /* AppDelegate.swift in Sources */,
 				799016B52B00CEC100F4F847 /* SceneDelegate.swift in Sources */,
 			);

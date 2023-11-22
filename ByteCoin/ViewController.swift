@@ -9,7 +9,6 @@ import UIKit
 
 final class ViewController: UIViewController {
     
-    
     // MARK: - UI
     
     private lazy var mainStackView: UIStackView = {
@@ -84,12 +83,17 @@ final class ViewController: UIViewController {
         return element
     }()
     
-    private let coinManager = CoinManager()
+    // MARK: - Private properties
+    
+    private var coinManager = CoinManager()
+    
+    
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        coinManager.delegate = self
         pickerView.dataSource = self
         pickerView.delegate = self
         
@@ -101,11 +105,12 @@ final class ViewController: UIViewController {
     
     private func setViews() {
         view.backgroundColor = UIColor(named: "Background Color")
+        
         view.addSubview(mainStackView)
         view.addSubview(pickerView)
         
         coinView.layer.cornerRadius = 40
-       
+        
         mainStackView.addArrangedSubview(titleLabel)
         mainStackView.addArrangedSubview(coinView)
         
@@ -138,10 +143,6 @@ final class ViewController: UIViewController {
             pickerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             pickerView.heightAnchor.constraint(equalToConstant: 216),
             
-            
-           
-            
-            
         ])
     }
     
@@ -167,4 +168,20 @@ extension ViewController: UIPickerViewDelegate {
         let selectedCurrency = (coinManager.currencyArray[row])
         coinManager.getCoinPrice(for: selectedCurrency)
     }
+}
+
+extension ViewController: CoinManagerDelegate {
+    func didUpdatedPrice(price: String, currency: String) {
+        
+        DispatchQueue.main.async {
+            self.bitcoinPriceLabel.text = price
+            self.currencyLabel.text = currency
+        }
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error)
+    }
+    
+    
 }
