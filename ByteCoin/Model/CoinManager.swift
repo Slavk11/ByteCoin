@@ -12,7 +12,6 @@ protocol CoinManagerDelegate {
     func didUpdatedPrice(price: String, currency: String)
     func didFailWithError(error: Error)
     
-    
 }
 
 struct CoinManager {
@@ -66,9 +65,6 @@ struct CoinManager {
                         
                     }
                 }
-                
-                let dataAsString = String(data: data!, encoding: .utf8)
-                print(dataAsString)
             }
             
             task.resume()
@@ -81,9 +77,7 @@ struct CoinManager {
         do {
             let decodedData = try decoder.decode(CoinData.self, from: data)
             let lastPrice = decodedData.rate
-            print(lastPrice)
             return lastPrice
-            
         } catch {
             delegate?.didFailWithError(error: error)
             return nil

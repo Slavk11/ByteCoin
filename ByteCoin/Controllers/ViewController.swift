@@ -146,8 +146,24 @@ final class ViewController: UIViewController {
         ])
     }
     
-    
 }
+
+//MARK: - CoinManagerDelegate
+
+extension ViewController: CoinManagerDelegate {
+    func didUpdatedPrice(price: String, currency: String) {
+        DispatchQueue.main.async {
+            self.bitcoinPriceLabel.text = price
+            self.currencyLabel.text = currency
+        }
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error)
+    }
+}
+
+//MARK: - UIPickerView DataSource & Delegate
 
 extension ViewController: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -170,18 +186,6 @@ extension ViewController: UIPickerViewDelegate {
     }
 }
 
-extension ViewController: CoinManagerDelegate {
-    func didUpdatedPrice(price: String, currency: String) {
-        
-        DispatchQueue.main.async {
-            self.bitcoinPriceLabel.text = price
-            self.currencyLabel.text = currency
-        }
-    }
-    
-    func didFailWithError(error: Error) {
-        print(error)
-    }
-    
-    
-}
+
+
+
