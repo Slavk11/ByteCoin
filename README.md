@@ -1,6 +1,6 @@
 # ByteCoin
 
-![ByteCoinGIF](https://github.com/Slavk11/ByteCoin/assets/105375579/1ba94855-3bf1-4e6c-bc93-9672aa9f5820)
+![ByteCoinGIF](https://github.com/Slavk11/ByteCoin/assets/105375579/eb7383f4-7936-42b1-9475-642fba16d709)
 
 ### The application is written in Swift programming language using the UIKit library.
 ### Coded without using Storyboard
